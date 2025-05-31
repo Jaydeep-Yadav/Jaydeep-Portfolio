@@ -129,7 +129,7 @@ After a short wait, GitHub will issue the SSL certificate and the site will go l
 💡 If you’re planning to host a Vite + React app with a custom domain, this setup is fast, free, and production-ready with HTTPS.
 
 
-## To auto-deploy a Vite React app to GitHub Pages on every commit using GitHub Actions:
+## Step 10. To auto-deploy a Vite React app to GitHub Pages on every commit using GitHub Actions:
 
 ### 1. Create GitHub Actions Workflow
 
@@ -188,7 +188,7 @@ Scroll to Workflow permissions
 
 Click Save
 
-### Step 4. Push to GitHub
+### 4. Push to GitHub
 
 ```bash
 git add .
@@ -208,7 +208,7 @@ You can monitor it under:
 GitHub repo → Actions tab
 (You'll see the "Deploy to GitHub Pages" workflow running)
 
-### Optional Step 4. Trigger with new commit
+### 4. Trigger with new commit (Optional)
 Alternatively, push a new commit:
 
 ```bash
