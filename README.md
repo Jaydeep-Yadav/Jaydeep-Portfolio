@@ -128,3 +128,68 @@ After a short wait, GitHub will issue the SSL certificate and the site will go l
 
 💡 If you’re planning to host a Vite + React app with a custom domain, this setup is fast, free, and production-ready with HTTPS.
 
+
+## To auto-deploy a Vite React app to GitHub Pages on every commit using GitHub Actions:
+
+### 1. Create GitHub Actions Workflow
+
+create the .github/workflows/deploy.yml file and open it in VS Code:
+
+```bash
+mkdir -p .github/workflows && code .github/workflows/deploy.yml
+```
+
+### 2. Paste these commands
+```yaml
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # or 'master' if that's your default
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+```
+
+### 3. Push to GitHub
+
+```bash
+git add .
+git commit -m "setup auto-deploy"
+git push origin main
+```
+💡 Now Every Commit to main Will:
+Build the project
+
+Deploy dist/ to the gh-pages branch
+
+Update your GitHub Pages site
+
+---
+You can monitor it under:
+
+GitHub repo → Actions tab
+(You'll see the "Deploy to GitHub Pages" workflow running)
