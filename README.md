@@ -174,7 +174,21 @@ jobs:
           publish_dir: ./dist
 ```
 
-### 3. Push to GitHub
+### 3.Allow GitHub Actions to create/push branches
+Go to your repo:
+ https://github.com/Jaydeep-Yadav/Jaydeep-Portfolio
+
+Click on Settings → Actions → General
+
+Scroll to Workflow permissions
+
+✅ Select “Read and write permissions” (default is “Read only”)
+
+✅ Also enable “Allow GitHub Actions to create and approve pull requests” if available
+
+Click Save
+
+### Step 4. Push to GitHub
 
 ```bash
 git add .
@@ -193,3 +207,11 @@ You can monitor it under:
 
 GitHub repo → Actions tab
 (You'll see the "Deploy to GitHub Pages" workflow running)
+
+### Optional Step 4. Trigger with new commit
+Alternatively, push a new commit:
+
+```bash
+git commit --allow-empty -m "Trigger deploy"
+git push
+```
