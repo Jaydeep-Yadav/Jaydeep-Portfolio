@@ -28,6 +28,7 @@ import school from './assets/education_logo/school.jpg';
 
 // Project Section Logo's
 import jobhunt from "../src/assets/work_logo/jobhunt.png"
+import devconnect from "../src/assets/work_logo/DevConnect.png"
 
 export const SkillsInfo = [
   {
@@ -98,8 +99,8 @@ export const education = [
     img: csit,
     school: "Chhatrapati Shivaji Institute of Technology",
     date: "July 2018 - May 2022",
-    grade: "9.8 CGPA",
-    desc: "I have completed my bachelor's degree (B.tech) in Computer Science and Engineering from CSIT, Durg.",
+    grade: "9.8 CGPA / 90.4 %",
+    desc: "I have completed my bachelor's degree (B.tech) with Honors in Computer Science and Engineering from CSIT, Durg.",
     degree: "B.tech Hons. in Computer Science and Engineering",
   },
   {
@@ -107,7 +108,7 @@ export const education = [
     img: school,
     school: "Mother Convent School, Durg",
     date: "Apr 2017 - March 2018",
-    grade: "92.4%",
+    grade: "92.4 %",
     desc: "I completed my class 12th education from Mother Convent School, Durg, under CG board, where I studied Physics, Chemistry, and Mathematics (PCM).",
     degree: "Class 12th - PCM",
   },
@@ -116,9 +117,9 @@ export const education = [
     img: school,
     school: "Mother Convent School, Durg",
     date: "Apr 2015 - March 2016",
-    grade: "87.5%",
+    grade: "88.3 %",
     desc: "I completed my class 10th education from Mother Convent School, Durg, under the CG board, where I studied Science.",
-    degree: "Class 12th",
+    degree: "Class 10th",
   },
 ];
 
@@ -129,8 +130,18 @@ export const projects = [
     description:
       "Full-stack job search app with posting, editing, and tracking jobs.",
     image: jobhunt,
-    tags: ["HTML", "CSS", "JavaScript", "React JS", "Redux", "Node", "MongoDB","Render", "Netlify"],
+    tags: ["HTML", "CSS", "JavaScript", "React JS", "Redux", "Node", "MongoDB", "Render", "Netlify"],
     github: "https://github.com/Jaydeep-Yadav/Job-Hunt",
     webapp: "https://job-hunt-jaydeep.netlify.app/",
+  },
+  {
+    id: 0,
+    title: "Dev Connect",
+    description:
+      "Connect place for developers with Real Time Chat.",
+    image: devconnect,
+    tags: ["React JS", "Redux", "Daisy UI", "Node", "Express", "Socket IO", "MongoDB", "Advance Auth", "AWS", "Nginx", "PM2"],
+    github: "https://github.com/Jaydeep-Yadav/Dev-Connect",
+    webapp: "http://13.60.198.108/",
   },
 ];  
